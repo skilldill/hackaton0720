@@ -1,0 +1,128 @@
+.header {
+    margin-bottom: 126px;
+}
+
+.header .title,
+.header .sub-title {
+    color: #373737;
+    font-family: 'PT Mono', monospace;
+}
+
+.header .title {
+    font-size: 140px;
+}
+
+.header .sub-title {
+    font-size: 60px;
+    margin-bottom: 26px;
+    margin-right: 33px;
+}
+
+.header .title-date {
+    font-family: 'PT Mono', monospace;
+    color: #C7C7C7;
+    font-size: 60px;
+    margin-bottom: 110px;
+}
+
+.header .mockup-code {
+    border-radius: 19px;
+    background-color: #373737;
+    padding: 40px 50px;
+    width: 735px;
+    margin-bottom: 126px;
+}
+
+.header .mockup-code img {
+    margin-bottom: 30px;
+}
+
+.header .mockup-code .btn {
+    font-family: 'PT Mono', monospace;
+    font-size: 30px;
+}
+
+.header .mockup-code-light {
+    border-radius: 19px;
+    background-color: white;
+    padding: 40px 50px;
+    width: 575px;
+    box-shadow: 0 0 20px #00000011;
+}
+
+.about {
+    margin-bottom: 126px;
+}
+
+.about .console {
+    height: 615px;
+    background-color: #373737;
+    border-radius: 19px;
+    position: relative;
+}
+
+.about .console img {
+    position: absolute;
+    right: 30px;
+    bottom: 35px;
+}
+
+.about .console .btn {
+    font-size: 30px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    font-family: 'PT Mono', monospace;
+    border-radius: 0;
+}
+
+.about .console .console-header {
+    height: 36px;
+    border-top-left-radius: 19px;
+    border-top-right-radius: 19px;
+    background-color: #858585;
+    padding-left: 16px;
+}
+
+.about .console pre {
+    font-family: 'PT Mono', monospace;
+    font-size: 30px;
+    line-height: 50px;
+    color: #ECECEC;
+    padding: 40px;
+    margin: 0;
+    word-wrap: break-word;
+}
+
+.about .console .controls {
+    height: 36px;
+}
+
+.about .console .circle {
+    width: 21px;
+    height: 21px;
+    border-radius: 100%;
+    margin: 0 6px;
+}
+
+.about .console .circle-red {
+    background-color: #E47575;
+}
+
+.about .console .circle-yellow {
+    background-color: #FFE299;
+}
+
+.about .console .circle-green {
+    background-color: #A4D57F;
+}
+
+.cases {
+    font-family: 'PT Mono', monospace;
+    background-color: #373737;
+    color: #ECECEC;
+    padding: 50px 0;
+}
+
+.cases .title {
+    font-size: 140px;
+}

@@ -1,22 +1,73 @@
 <!doctype html>
 <html lang="ru">
     <head>
-        <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./css/style.css">
         <title>Hello, world!</title>
     </head>
     <body>
         <div class="container">
-            
+            <header class="header" id="header">
+                <div class="d-flex justify-content-end align-items-end">
+                    <h3 class="display-3 sub-title">ОНЛАЙН</h3>
+                    <h1 class="display-1 title">ХАКАТОН</h1>
+                </div>
+                <h3 class="display-3 title-date text-right">07 - 12 июля</h3>
+                <div class="row justify-content-end">
+                    <div class="col col-md-8">
+                        <div class="d-flex justify-content-end">
+                            <div class="mockup-code">
+                                <img src="./img/mockup-code.png" alt="mockup code">
+                                <button type="button" class="btn btn-primary btn-lg">goto регистрация</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-md-7">
+                        <div class="mockup-code-light">
+                            <img src="./img/mockup-code-sm.png" alt="mockup code">
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section class="about" id="about">
+                <div class="console">
+                    <div class="console-header">
+                        <div class="d-flex align-items-center controls">
+                            <div class="circle circle-red"></div>
+                            <div class="circle circle-yellow"></div>
+                            <div class="circle circle-green"></div>
+                        </div>
+                    </div>
+                    <pre id="console-content">Online-Hackaton: ~scope~ user$</pre>
+                    <button type="button" class="btn btn-outline-light btn-lg" id="btn-goto-cases">
+                        Открыть кейсы
+                    </button>
+                    <img src="./img/rabbits.svg" alt="rabbits">
+                </div>
+            </section>
         </div>
+        <section class="cases">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-6">
+                        <h1 class="display-1 title">КЕЙСЫ</h1>
+                    </div>
+                    <div class="col col-md-6">
+                        <div class="d-flex justify-content-end">
+                            <img src="./img/pirat-hack.svg" alt="sceleton">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container">
 
-        <!-- Optional JavaScript -->
-        <!-- Popper.js first, then Bootstrap JS -->
+        </div>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
         <script src="./js/script.js"></script>
