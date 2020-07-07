@@ -105,6 +105,7 @@
     padding: 40px;
     margin: 0;
     word-wrap: break-word;
+    overflow-x: hidden;
 }
 
 .about .console .cursor {
