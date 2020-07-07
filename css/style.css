@@ -1,3 +1,23 @@
+.menu {
+    margin-bottom: 60px;
+    padding-top: 50px;
+}
+
+.menu ul {
+    padding: 0;
+}
+
+.menu-item {
+    list-style-type: none;
+}
+
+.menu-item a {
+    font-family: 'PT Mono', monospace;
+    font-size: 25px;
+    color: #373737;
+    text-decoration: none;
+}
+
 .header {
     margin-bottom: 126px;
 }

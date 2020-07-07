@@ -1,9 +1,13 @@
+const headerBlock = document.getElementById('header');
 const aboutBlock = document.getElementById('about');
+const casesBlock = document.getElementById('cases');
+const giftsBlock = document.getElementById('gifts');
 
 const consoleContent = document.getElementById('console-content');
 const btnGotoCases = document.getElementById('btn-goto-cases');
 const casesItems = document.getElementsByClassName('case-item');
 const giftsCodes = document.getElementsByClassName('gift-code');
+const menuItems = headerBlock.querySelectorAll('.menu-item a');
 
 const consoleText = ' Привет, ты попал на страницу \n' + 
     'хакатона, который устроили обычные ребята заручившись поддержкой \n' + 
@@ -82,10 +86,52 @@ function addMouseEventGiftCode() {
     }
 }
 
+function handleClickMenuItem(event) {
+    event.preventDefault();
+    const target = event.currentTarget;
+    const href = target.getAttribute('href');
+    const block = document.querySelector(href);
+    window.scrollTo({
+        top: block.offsetTop,
+        behavior: "smooth"
+    });
+}
+
+function handleHoverMenuItem(event) {
+    const target = event.currentTarget;
+    target.innerText = `>${target.innerText}`;
+}
+
+function handleLeaveMenuItem(event) {
+    const target = event.currentTarget;
+    const content = target.innerText;
+    target.innerText = content.substring(1, content.length);
+}
+
+function addMouseEventMenuItems() {
+    for (let i = 0; i < menuItems.length; i++) {
+        const item = menuItems[i];
+        item.addEventListener('mouseenter', handleHoverMenuItem);
+        item.addEventListener('mouseleave', handleLeaveMenuItem);
+        item.addEventListener('click', handleClickMenuItem);
+    }
+}
+
+function handleClickBtnGoToCase() {
+    window.scrollTo({
+        top: casesBlock.offsetTop,
+        behavior: "smooth"
+    });
+}
+
 function init() {
     btnGotoCases.style.display = "none";
+    
     addMouseEventCases();
     addMouseEventGiftCode();
+    addMouseEventMenuItems();
+    btnGotoCases.addEventListener('click', handleClickBtnGoToCase);
+
     window.addEventListener('scroll', handleScrollPage);
 }
 
