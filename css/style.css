@@ -25,12 +25,24 @@
     margin-bottom: 110px;
 }
 
+.code-block {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
 .header .mockup-code {
     border-radius: 19px;
     background-color: #373737;
     padding: 40px 50px;
     width: 735px;
     margin-bottom: 126px;
+    transition: all .3s;
+    transform: rotateX(0deg) rotateY(-15deg);
+}
+
+.header .mockup-code:hover,
+.header .mockup-code-light:hover {
+    transform: rotateX(0deg) rotateY(0deg);
 }
 
 .header .mockup-code img {
@@ -48,6 +60,8 @@
     padding: 40px 50px;
     width: 575px;
     box-shadow: 0 0 20px #00000011;
+    transition: all .3s;
+    transform: rotateX(0deg) rotateY(15deg);
 }
 
 .about {
@@ -93,6 +107,13 @@
     word-wrap: break-word;
 }
 
+.about .console .cursor {
+    display: inline-block;
+    height: 30px;
+    width: 10px;
+    background-color: #ECECEC;
+}
+
 .about .console .controls {
     height: 36px;
 }
@@ -125,4 +146,76 @@
 
 .cases .title {
     font-size: 140px;
+}
+
+.case-item {
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.case-item .case-arrow {
+    margin-right: 20px;
+    opacity: 0;
+}
+
+.case-item .case-arrow-show {
+    opacity: 1;
+}
+
+.gifts {
+    font-family: 'PT Mono', monospace;
+    padding: 50px 0;
+}
+
+.gifts .title {
+    font-size: 140px;
+}
+
+.gifts .mock-code {
+    position: relative;
+    padding: 30px;
+    border-radius: 19px;
+    background-color: #373737;
+    width: 950px;
+    margin-bottom: 50px;
+    transition: all .3s;
+    transform: rotateX(0deg) rotateY(5deg);
+}
+
+.gifts .mock-code-ligth {
+    position: relative;
+    padding: 30px;
+    border-radius: 19px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.082);
+    width: 950px;
+    margin-bottom: 50px;
+    transition: all .3s;
+    transform: rotateX(0deg) rotateY(-5deg);
+}
+
+.gifts .card-description {
+    position: absolute;
+    top: 260px;
+    left: 250px;
+    font-size: 45px;
+    color: #ECECEC;
+}
+
+.gifts .card-description-ligth {
+    position: absolute;
+    top: 260px;
+    left: 250px;
+    font-size: 60px;
+}
+
+.gifts .description {
+    top: 260px;
+    left: 250px;
+    font-size: 60px;
+}
+
+.gifts .mock-code:hover,
+.gifts .mock-code-ligth:hover {
+    transform: rotateX(0deg) rotateY(0deg);
 }

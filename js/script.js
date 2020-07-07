@@ -2,7 +2,7 @@ const aboutBlock = document.getElementById('about');
 
 const consoleContent = document.getElementById('console-content');
 const btnGotoCases = document.getElementById('btn-goto-cases');
-
+const casesItems = document.getElementsByClassName('case-item');
 
 const consoleText = ' Привет, ты попал на страницу \n' + 
     'хакатона, который устроили обычные ребята заручившись поддержкой \n' + 
@@ -41,9 +41,29 @@ function handleScrollPage() {
     } 
 }
 
+function handleHoverCaseItem(event) {
+    const target = event.currentTarget;
+    const arrow = target.querySelector('.case-arrow');
+    arrow.classList.add('case-arrow-show');
+}
+
+function handleLeaveCaseItem(event) {
+    const target = event.currentTarget;
+    const arrow = target.querySelector('.case-arrow');
+    arrow.classList.remove('case-arrow-show');
+}
+
+function addMouseEventCases() {
+    for (let i = 0; i < casesItems.length; i++) {
+        const caseItem = casesItems[i];
+        caseItem.addEventListener('mousemove', handleHoverCaseItem);
+        caseItem.addEventListener('mouseleave', handleLeaveCaseItem);
+    }
+}
+
 function init() {
     btnGotoCases.style.display = "none";
-
+    addMouseEventCases();
     window.addEventListener('scroll', handleScrollPage);
 }
 
