@@ -3,6 +3,7 @@ const aboutBlock = document.getElementById('about');
 const consoleContent = document.getElementById('console-content');
 const btnGotoCases = document.getElementById('btn-goto-cases');
 const casesItems = document.getElementsByClassName('case-item');
+const giftsCodes = document.getElementsByClassName('gift-code');
 
 const consoleText = ' Привет, ты попал на страницу \n' + 
     'хакатона, который устроили обычные ребята заручившись поддержкой \n' + 
@@ -61,9 +62,30 @@ function addMouseEventCases() {
     }
 }
 
+function handleHoverGiftCode(event) {
+    const target = event.currentTarget;
+    const des = target.querySelector('.description');
+    des.classList.add('description-show');
+}
+
+function handleLeaveGiftCode(event) {
+    const target = event.currentTarget;
+    const des = target.querySelector('.description');
+    des.classList.remove('description-show');
+}
+
+function addMouseEventGiftCode() {
+    for (let i = 0; i < giftsCodes.length; i++) {
+        const giftCode = giftsCodes[i];
+        giftCode.addEventListener('mousemove', handleHoverGiftCode);
+        giftCode.addEventListener('mouseleave', handleLeaveGiftCode);
+    }
+}
+
 function init() {
     btnGotoCases.style.display = "none";
     addMouseEventCases();
+    addMouseEventGiftCode();
     window.addEventListener('scroll', handleScrollPage);
 }
 

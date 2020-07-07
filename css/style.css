@@ -169,6 +169,7 @@
 
 .gifts .title {
     font-size: 140px;
+    margin-bottom: 50px;
 }
 
 .gifts .mock-code {
@@ -177,9 +178,11 @@
     border-radius: 19px;
     background-color: #373737;
     width: 950px;
+    height: 620px;
     margin-bottom: 50px;
     transition: all .3s;
     transform: rotateX(0deg) rotateY(5deg);
+    overflow: hidden;
 }
 
 .gifts .mock-code-ligth {
@@ -189,9 +192,11 @@
     background-color: #fff;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.082);
     width: 950px;
+    height: 620px;
     margin-bottom: 50px;
     transition: all .3s;
     transform: rotateX(0deg) rotateY(-5deg);
+    overflow: hidden;
 }
 
 .gifts .card-description {
@@ -210,9 +215,33 @@
 }
 
 .gifts .description {
-    top: 260px;
-    left: 250px;
-    font-size: 60px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    background-color: #373737;
+    transition: all .3s;
+    transform: translateY(-630px);
+}
+
+.gifts .description p {
+    padding: 50px;
+    font-size: 30px;
+    color: #ECECEC;
+}
+
+.gifts .description-ligth p {
+    color: #373737;
+}
+
+.gifts .description-show {
+    transform: translateY(0px);
+}
+
+.gifts .description-ligth {
+    background-color: white;
 }
 
 .gifts .mock-code:hover,
