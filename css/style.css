@@ -75,6 +75,10 @@
     position: relative;
 }
 
+.about .console-content {
+    overflow-x: hidden;
+}
+
 .about .console img {
     position: absolute;
     right: 30px;
