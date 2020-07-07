@@ -99,13 +99,14 @@ function handleClickMenuItem(event) {
 
 function handleHoverMenuItem(event) {
     const target = event.currentTarget;
-    target.innerText = `>${target.innerText}`;
+    const arrow = target.querySelector('span');
+    arrow.classList.add('arrow-show');
 }
 
 function handleLeaveMenuItem(event) {
     const target = event.currentTarget;
-    const content = target.innerText;
-    target.innerText = content.substring(1, content.length);
+    const arrow = target.querySelector('span');
+    arrow.classList.remove('arrow-show');
 }
 
 function addMouseEventMenuItems() {

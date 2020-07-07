@@ -18,6 +18,14 @@
     text-decoration: none;
 }
 
+.menu-item .arrow {
+    opacity: 0;
+}
+
+.menu-item .arrow-show {
+    opacity: 1;
+}
+
 .header {
     margin-bottom: 126px;
 }
