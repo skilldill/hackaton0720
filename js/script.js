@@ -134,13 +134,28 @@ function init() {
     btnGotoCases.addEventListener('click', handleClickBtnGoToCase);
 
     window.addEventListener('scroll', handleScrollPage);
-
+    
+    document.title === 'Х А К А Т 0 Н'
     //INTERVAL FOR TITLE
     setInterval(() => { 
         if (document.title === 'Х А К А Т 0 Н') {
-            document.title = 'H A @ C K @ T O N'
-        } else {
-            document.title = 'Х А К А Т 0 Н'
+            document.title = 'H @ C K @ T O N'
+        } 
+
+        if (document.title === 'H @ C K @ T O N') {
+            document.title = 'H ☠️ C K ☠️ T O N';
+        }
+
+        if (document.title === 'H ☠️ C K ☠️ T O N') {
+            document.title = 'Х 👾 К 👾 Т 🤖 Н';
+        }
+
+        if (document.title === 'Х 👾 К 👾 Т 🤖 Н') {
+            document.title = 'ハッカソン';
+        }
+
+        if (document.title === 'ハッカソン') {
+            document.title = 'Х А К А Т 0 Н';
         }
     }, 3000);
 }
