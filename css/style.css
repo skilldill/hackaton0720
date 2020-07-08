@@ -1,3 +1,250 @@
 .header {
-  height: 100vh;
+    margin-bottom: 126px;
+}
+
+.header .title,
+.header .sub-title {
+    color: #373737;
+    font-family: 'PT Mono', monospace;
+}
+
+.header .title {
+    font-size: 140px;
+}
+
+.header .sub-title {
+    font-size: 60px;
+    margin-bottom: 30px;
+    margin-right: 33px;
+}
+
+.header .title-date {
+    font-family: 'PT Mono', monospace;
+    color: #C7C7C7;
+    font-size: 60px;
+    margin-bottom: 110px;
+}
+
+.code-block {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.header .mockup-code {
+    border-radius: 19px;
+    background-color: #373737;
+    padding: 40px 50px;
+    width: 735px;
+    margin-bottom: 126px;
+    transition: all .3s;
+    transform: rotateX(0deg) rotateY(-15deg);
+}
+
+.header .mockup-code:hover,
+.header .mockup-code-light:hover {
+    transform: rotateX(0deg) rotateY(0deg);
+}
+
+.header .mockup-code img {
+    margin-bottom: 30px;
+}
+
+.header .mockup-code .btn {
+    font-family: 'PT Mono', monospace;
+    font-size: 30px;
+}
+
+.header .mockup-code-light {
+    border-radius: 19px;
+    background-color: white;
+    padding: 40px 50px;
+    width: 575px;
+    box-shadow: 0 0 20px #00000011;
+    transition: all .3s;
+    transform: rotateX(0deg) rotateY(15deg);
+}
+
+.about {
+    margin-bottom: 126px;
+}
+
+.about .console {
+    height: 615px;
+    background-color: #373737;
+    border-radius: 19px;
+    position: relative;
+}
+
+.about .console img {
+    position: absolute;
+    right: 30px;
+    bottom: 35px;
+}
+
+.about .console .btn {
+    font-size: 30px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    font-family: 'PT Mono', monospace;
+    border-radius: 0;
+}
+
+.about .console .console-header {
+    height: 36px;
+    border-top-left-radius: 19px;
+    border-top-right-radius: 19px;
+    background-color: #858585;
+    padding-left: 16px;
+}
+
+.about .console pre {
+    font-family: 'PT Mono', monospace;
+    font-size: 30px;
+    line-height: 50px;
+    color: #ECECEC;
+    padding: 40px;
+    margin: 0;
+    word-wrap: break-word;
+}
+
+.about .console .cursor {
+    display: inline-block;
+    height: 30px;
+    width: 10px;
+    background-color: #ECECEC;
+}
+
+.about .console .controls {
+    height: 36px;
+}
+
+.about .console .circle {
+    width: 21px;
+    height: 21px;
+    border-radius: 100%;
+    margin: 0 6px;
+}
+
+.about .console .circle-red {
+    background-color: #E47575;
+}
+
+.about .console .circle-yellow {
+    background-color: #FFE299;
+}
+
+.about .console .circle-green {
+    background-color: #A4D57F;
+}
+
+.cases {
+    font-family: 'PT Mono', monospace;
+    background-color: #373737;
+    color: #ECECEC;
+    padding: 50px 0;
+}
+
+.cases .title {
+    font-size: 140px;
+}
+
+.case-item {
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.case-item .case-arrow {
+    margin-right: 20px;
+    opacity: 0;
+}
+
+.case-item .case-arrow-show {
+    opacity: 1;
+}
+
+.gifts {
+    font-family: 'PT Mono', monospace;
+    padding: 50px 0;
+}
+
+.gifts .title {
+    font-size: 140px;
+    margin-bottom: 50px;
+}
+
+.gifts .mock-code {
+    position: relative;
+    padding: 30px;
+    border-radius: 19px;
+    background-color: #373737;
+    width: 950px;
+    height: 620px;
+    margin-bottom: 50px;
+    transition: all .3s;
+    transform: rotateX(0deg) rotateY(5deg);
+    overflow: hidden;
+}
+
+.gifts .mock-code-ligth {
+    position: relative;
+    padding: 30px;
+    border-radius: 19px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.082);
+    width: 950px;
+    height: 620px;
+    margin-bottom: 50px;
+    transition: all .3s;
+    transform: rotateX(0deg) rotateY(-5deg);
+    overflow: hidden;
+}
+
+.gifts .card-description {
+    position: absolute;
+    top: 260px;
+    left: 250px;
+    font-size: 45px;
+    color: #ECECEC;
+}
+
+.gifts .card-description-ligth {
+    position: absolute;
+    top: 260px;
+    left: 250px;
+    font-size: 60px;
+}
+
+.gifts .description {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    background-color: #373737;
+    transition: all .3s;
+    transform: translateY(-630px);
+}
+
+.gifts .description p {
+    padding: 50px;
+    font-size: 30px;
+    color: #ECECEC;
+}
+
+.gifts .description-ligth p {
+    color: #373737;
+}
+
+.gifts .description-show {
+    transform: translateY(0px);
+}
+
+.gifts .description-ligth {
+    background-color: white;
+}
+
+.gifts .mock-code:hover,
+.gifts .mock-code-ligth:hover {
+    transform: rotateX(0deg) rotateY(0deg);
 }
