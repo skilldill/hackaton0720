@@ -134,6 +134,15 @@ function init() {
     btnGotoCases.addEventListener('click', handleClickBtnGoToCase);
 
     window.addEventListener('scroll', handleScrollPage);
+
+    //INTERVAL FOR TITLE
+    setInterval(() => { 
+        if (document.title === 'Х А К А Т 0 Н') {
+            document.title = 'H A @ C K @ T O N'
+        } else {
+            document.title = 'Х А К А Т 0 Н'
+        }
+    }, 3000);
 }
 
 // INITIAL
