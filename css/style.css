@@ -324,6 +324,7 @@
 }
 
 .endpoints .console {
+    margin-top: 50px;
     font-family: 'PT Mono', monospace;
     font-size: 30px;
     color: #ECECEC;
