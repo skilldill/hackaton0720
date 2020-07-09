@@ -12,6 +12,7 @@ const menuItems = headerBlock.querySelectorAll('.menu-item a');
 const endpointsConsole = endpointsBlock.querySelector('#console-endpoints');
 const endpointsForm = endpointsBlock.querySelector('#console-endpoints-form');
 const endpointsLogs = endpointsBlock.querySelector('#logs');
+const endpointsConsoleForm = endpointsBlock.querySelector('.console-form');
 
 const consoleText = ' Привет, ты попал на страницу \n' + 
     'хакатона, который устроили обычные ребята заручившись поддержкой \n' + 
@@ -163,8 +164,22 @@ endpointsForm.addEventListener('submit', (event) => {
                 endpointsForm['command'].value = '';
                 break;
 
+            case 'help':    
+            case '-help':
+            case '--help':
+                endpointsLogs.innerHTML = `
+                    <p>COMMANDS:</p>
+                    <p>endpoints</p>
+                    <p>clear</p>
+                `;
+                endpointsForm['command'].value = '';
+                break;
+
             case 'endpoints':
-                endpointsConsole.innerHTML = '';
+                endpointsConsoleForm.style.display = "none";
+                endpointsLogs.innerHTML = '';
+                endpointsForm['command'].value = '';
+
                 let interval;
                 let timer;
 
@@ -172,18 +187,19 @@ endpointsForm.addEventListener('submit', (event) => {
                     let loadRow = '<p>LOADING...</P>';
                     interval = setInterval(() => {
                         loadRow += '=';
-                        endpointsConsole.innerHTML = loadRow + '>'
+                        endpointsLogs.innerHTML = loadRow + '>'
                     }, 60);
 
                     timer = setTimeout(() => {
-                        clearInterval(interval);
                         resolve()
                     }, 4000);
                 })
                 p.then(() => {
                     clearInterval(interval);
                     clearTimeout(timer);
-                    endpointsConsole.innerHTML = endpointsCommandResult;
+                    endpointsConsoleForm.style.display = "flex";
+                    endpointsLogs.innerHTML = endpointsCommandResult;
+                    endpointsForm['command'].focus();
                 });
                 break;
     

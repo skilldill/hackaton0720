@@ -338,3 +338,7 @@
     color: #373737;
     text-decoration: none;
 }
+
+.endpoints .console {
+    height: 655px;
+}
