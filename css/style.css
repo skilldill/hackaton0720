@@ -183,6 +183,7 @@
     background-color: #373737;
     color: #ECECEC;
     padding: 50px 0;
+    margin-bottom: 76px;
 }
 
 .cases .title {
@@ -206,6 +207,7 @@
 .gifts {
     font-family: 'PT Mono', monospace;
     padding: 50px 0;
+    margin-bottom: 126px;
 }
 
 .gifts .title {
@@ -291,7 +293,17 @@
 }
 
 .endpoints {
+    font-family: 'PT Mono', monospace;
+}
 
+.endpoints .title{
+    font-size: 140px;
+}
+
+.endpoints .sub-title {
+    font-size: 60px;
+    margin-bottom: 30px;
+    margin-right: 33px;
 }
 
 .console .console-form {
