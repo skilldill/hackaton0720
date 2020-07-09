@@ -199,6 +199,7 @@ endpointsForm.addEventListener('submit', (event) => {
                 endpointsLogs.innerHTML = `
                     <p>COMMANDS:</p>
                     <p>endpoints</p>
+                    <p>time</p>
                     <p>clear</p>
                 `;
                 endpointsForm['command'].value = '';
