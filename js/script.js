@@ -2,12 +2,16 @@ const headerBlock = document.getElementById('header');
 const aboutBlock = document.getElementById('about');
 const casesBlock = document.getElementById('cases');
 const giftsBlock = document.getElementById('gifts');
+const endpointsBlock = document.getElementById('endpoints');
 
 const consoleContent = document.getElementById('console-content');
 const btnGotoCases = document.getElementById('btn-goto-cases');
 const casesItems = document.getElementsByClassName('case-item');
 const giftsCodes = document.getElementsByClassName('gift-code');
 const menuItems = headerBlock.querySelectorAll('.menu-item a');
+const endpointsConsole = endpointsBlock.querySelector('#console-endpoints');
+const endpointsForm = endpointsBlock.querySelector('#console-endpoints-form');
+const endpointsLogs = endpointsBlock.querySelector('#logs');
 
 const consoleText = ' Привет, ты попал на страницу \n' + 
     'хакатона, который устроили обычные ребята заручившись поддержкой \n' + 
@@ -39,6 +43,22 @@ function renderTextLetters(text) {
         });
     }
 }
+
+const endpointsCommandResult = `
+    <div class="endpoints-map">
+        <p> > > > START 12:00 < < <</p>
+        <p>|</p>
+        <p>+ --- <a href="#">Первая контрольная точка</a></p>
+        <p>|</p>
+        <p>+ --- <a href="#">Вторая контрольная точка</a></p>
+        <p>|</p>
+        <p>+ --- <a href="#">Третья контрольная точка</a></p>
+        <p>|</p>
+        <p>+ --- <a href="#">CODE FREEZE</a></p>
+        <p>|</p>
+        <p> > > > END 12:00 < < <</p>
+    </div>
+`
 
 function handleScrollPage() {
     if (window.pageYOffset >= 700 && !consoleTextRendered) {
@@ -125,6 +145,30 @@ function handleClickBtnGoToCase() {
     });
 }
 
+endpointsForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const command = endpointsForm['command'].value;
+
+    if (!!command.length) {
+        switch(command) {
+            case 'clear':
+                endpointsLogs.innerHTML = '';
+                endpointsForm['command'].value = '';
+                break;
+            
+            case 'endpoints':
+                endpointsConsole.innerHTML = endpointsCommandResult;
+                break;
+    
+            default:
+                endpointsLogs.innerHTML += `<p>Online-Hackaton: command '${command}' not found</p>`;
+                endpointsForm['command'].value = '';
+                break;
+        }
+    }
+})
+
 function init() {
     btnGotoCases.style.display = "none";
     
@@ -139,23 +183,9 @@ function init() {
     //INTERVAL FOR TITLE
     setInterval(() => { 
         if (document.title === 'Х А К А Т 0 Н') {
-            document.title = 'H @ C K @ T O N'
-        } 
-
-        if (document.title === 'H @ C K @ T O N') {
-            document.title = 'H ☠️ C K ☠️ T O N';
-        }
-
-        if (document.title === 'H ☠️ C K ☠️ T O N') {
-            document.title = 'Х 👾 К 👾 Т 🤖 Н';
-        }
-
-        if (document.title === 'Х 👾 К 👾 Т 🤖 Н') {
-            document.title = 'ハッカソン';
-        }
-
-        if (document.title === 'ハッカソン') {
-            document.title = 'Х А К А Т 0 Н';
+            document.title = 'Х 👾 К 👾 Т 🤖 Н'
+        } else {
+            document.title = 'Х А К А Т 0 Н'
         }
     }, 3000);
 }
