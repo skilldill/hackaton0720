@@ -74,6 +74,10 @@ const it2gContent = `
 </pre>
 `
 
+const hackerVideoContent = `
+    <iframe width="400" height="200" src="https://www.youtube.com/embed/xb8G8qA9ibI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+`
+
 function handleScrollPage() {
     if (window.pageYOffset >= 700 && !consoleTextRendered) {
         renderTextLetters(consoleText);
@@ -159,6 +163,8 @@ function handleClickBtnGoToCase() {
     });
 }
 
+endpointsConsole.addEventListener('click', () => endpointsForm['command'].focus());
+
 endpointsForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -179,6 +185,11 @@ endpointsForm.addEventListener('submit', (event) => {
 
             case 'it2g':
                 endpointsLogs.innerHTML = it2gContent;
+                endpointsForm['command'].value = '';
+                break;
+
+            case 'happy hack':
+                endpointsLogs.innerHTML = hackerVideoContent;
                 endpointsForm['command'].value = '';
                 break;
 
