@@ -149,6 +149,7 @@ endpointsForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
     const command = endpointsForm['command'].value;
+    endpointsForm['command'].setAttribute('data-prevcommand', command);
 
     if (!!command.length) {
         switch(command) {
@@ -157,8 +158,33 @@ endpointsForm.addEventListener('submit', (event) => {
                 endpointsForm['command'].value = '';
                 break;
             
+            case 'time':
+                endpointsLogs.innerHTML += `<p>Online-Hackaton: TIME TO START: ${consoleTime}</p>`;
+                endpointsForm['command'].value = '';
+                break;
+
             case 'endpoints':
-                endpointsConsole.innerHTML = endpointsCommandResult;
+                endpointsConsole.innerHTML = '';
+                let interval;
+                let timer;
+
+                const p = new Promise((resolve) => {
+                    let loadRow = '<p>LOADING...</P>';
+                    interval = setInterval(() => {
+                        loadRow += '=';
+                        endpointsConsole.innerHTML = loadRow + '>'
+                    }, 60);
+
+                    timer = setTimeout(() => {
+                        clearInterval(interval);
+                        resolve()
+                    }, 4000);
+                })
+                p.then(() => {
+                    clearInterval(interval);
+                    clearTimeout(timer);
+                    endpointsConsole.innerHTML = endpointsCommandResult;
+                });
                 break;
     
             default:
@@ -166,6 +192,13 @@ endpointsForm.addEventListener('submit', (event) => {
                 endpointsForm['command'].value = '';
                 break;
         }
+    }
+})
+
+endpointsForm['command'].addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowUp') {
+        const prevcommand = endpointsForm['command'].getAttribute('data-prevcommand');
+        !!prevcommand && (endpointsForm['command'].value = prevcommand);
     }
 })
 
