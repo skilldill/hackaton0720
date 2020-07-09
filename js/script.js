@@ -233,7 +233,7 @@ endpointsForm.addEventListener('submit', (event) => {
                 break;
     
             default:
-                endpointsLogs.innerHTML += `<p>command '${command}' not found, use command 'help'</p>`;
+                endpointsLogs.innerHTML += `<p>Online-Hackaton: command '${command}' not found, use command 'help'</p>`;
                 endpointsForm['command'].value = '';
                 break;
         }

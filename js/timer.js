@@ -1,7 +1,7 @@
 const timerDisplay = document.getElementById('timer-display');
 
 // Set the date we're counting down to
-let countDownDate = new Date("July 10, 2020 12:00:00").getTime();
+let countDownDate = new Date("July 31, 2020 12:00:00").getTime();
 
 function addZeroStart(val) {
   if (val < 10) {
@@ -35,7 +35,20 @@ let x = setInterval(function() {
 
   // Display the result in the element with id="demo"
   consoleTime = days + " days " + addZeroStart(hours) + ":"+ addZeroStart(minutes) + ":" + addZeroStart(seconds);
-  timerDisplay.innerHTML = days + " дня <br>" + addZeroStart(hours) + ":"+ addZeroStart(minutes) + ":" + addZeroStart(seconds);
+  let daysWord;
+
+  const daysStr = days.toString();
+  const daysLastChar = daysStr[daysStr.length - 1];
+
+  if (daysLastChar === '1') {
+    daysWord = 'день'
+  } else if (daysLastChar === '2' || daysLastChar === '3' || daysLastChar === '4') {
+    daysWord = 'дня'
+  } else {
+    daysWord = 'дней'
+  }
+ 
+  timerDisplay.innerHTML = days + " " + daysWord + " <br>" + addZeroStart(hours) + ":"+ addZeroStart(minutes) + ":" + addZeroStart(seconds);
 
   // If the count down is finished, write some text 
   if (distance < 0) {
