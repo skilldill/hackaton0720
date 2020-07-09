@@ -61,6 +61,19 @@ const endpointsCommandResult = `
     </div>
 `
 
+const it2gContent = `
+<pre>
+     __   ________    _____     _____
+    |__| |        |  /  _  \\   /  __ \\
+     __  |__    __| |__/ \\  | |  |  |_|
+    |  |    |  |         / /  |  | ___  
+    |  |    |  |        / /   |  ||_  |
+    |  |    |  |       / /    |  |  | |
+    |  |    |  |      / /____ |  |__| |
+    |__|    |__|     |_______| \\______/
+</pre>
+`
+
 function handleScrollPage() {
     if (window.pageYOffset >= 700 && !consoleTextRendered) {
         renderTextLetters(consoleText);
@@ -164,6 +177,11 @@ endpointsForm.addEventListener('submit', (event) => {
                 endpointsForm['command'].value = '';
                 break;
 
+            case 'it2g':
+                endpointsLogs.innerHTML = it2gContent;
+                endpointsForm['command'].value = '';
+                break;
+
             case 'help':    
             case '-help':
             case '--help':
@@ -204,7 +222,7 @@ endpointsForm.addEventListener('submit', (event) => {
                 break;
     
             default:
-                endpointsLogs.innerHTML += `<p>Online-Hackaton: command '${command}' not found</p>`;
+                endpointsLogs.innerHTML += `<p>command '${command}' not found, use command 'help'</p>`;
                 endpointsForm['command'].value = '';
                 break;
         }
