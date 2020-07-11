@@ -355,3 +355,39 @@
 .endpoints .console {
     height: 655px;
 }
+
+.members {
+    font-family: 'PT Mono', monospace;
+    background-color: #373737;
+    color: #ECECEC;
+    padding: 50px 0;
+    margin-bottom: 76px;
+    margin-top: 146px;
+}
+
+.members .title {
+    font-size: 140px;
+}
+
+.member-card {
+    text-align: center;
+    margin: 40px;
+}
+
+.member-card .background {
+
+}
+
+.member-card .name,
+.member-card pre {
+    font-size: 30px;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+}
+
+.member-card .avatar img {
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+}
