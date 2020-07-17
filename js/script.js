@@ -316,14 +316,16 @@ function init() {
     }, 3000);
 
     // INTERVAL FOR TRACKS
-    trackSecurityPicture.innerText = doorlockPictures;
-    setInterval(() => {
-        if (trackSecurityPicture.innerText === doorlockPictures) {
-            trackSecurityPicture.innerText = doorlockOpenedPictures;
-        } else {
-            trackSecurityPicture.innerText = doorlockPictures;
-        }
-    }, 3000)
+    if (!!trackSecurityPicture) {
+        trackSecurityPicture.innerText = doorlockPictures;
+        setInterval(() => {
+            if (trackSecurityPicture.innerText === doorlockPictures) {
+                trackSecurityPicture.innerText = doorlockOpenedPictures;
+            } else {
+                trackSecurityPicture.innerText = doorlockPictures;
+            }
+        }, 3000)
+    }
 }
 
 // INITIAL
