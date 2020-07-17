@@ -188,6 +188,15 @@
 
 .cases .title {
     font-size: 140px;
+    margin-bottom: 60px;
+}
+
+.cases .sub-title {
+    font-size: 60px;
+}
+
+.cases .picture-chars {
+    height: 500px;
 }
 
 .case-item {

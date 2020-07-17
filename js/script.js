@@ -13,6 +13,7 @@ const endpointsConsole = endpointsBlock.querySelector('#console-endpoints');
 const endpointsForm = endpointsBlock.querySelector('#console-endpoints-form');
 const endpointsLogs = endpointsBlock.querySelector('#logs');
 const endpointsConsoleForm = endpointsBlock.querySelector('.console-form');
+const trackSecurityPicture = casesBlock.querySelector('#track-security-picture');
 
 const consoleText = ' Привет, ты попал на страницу \n' + 
     'хакатона, который устроили обычные ребята заручившись поддержкой \n' + 
@@ -22,6 +23,52 @@ const consoleText = ' Привет, ты попал на страницу \n' +
     'вкусные кейсы, а спонсоры хакатона посчитали что будет \n' + 
     'не хорошо оставлять победителя без заслуженного приза. \n' + 
     '👇 👇 👇 Жмякай на кнопку ниже и переходи к кейсам...';
+
+const doorlockPictures = `
+      _____                                   _____
+     / ___ \\                                 / ___ \\
+    / /   \\ \\                               / /   \\ \\
+ __|_|_____|_|__                         __|_|_____|_|__
+|               |                       |               |           
+|               |                       |               |
+|               |                       |               |
+|               |                       |               |
+|               |                       |               |
+|_______________|         _____         |_______________|
+                         / ___ \\
+                        / /   \\ \\
+                     __|_|_____|_|__
+                    |               |
+                    |               |
+                    |               |
+                    |               |
+                    |               |
+                    |_______________|
+`
+
+const doorlockOpenedPictures = `
+      _____                                   _____
+     / ___ \\                                 / ___ \\
+    / /   \\ \\                               / /   \\ \\
+   | |     |_|                             | |     |_|
+ __|_|__________                         __|_|__________
+|               |                       |               |           
+|               |                       |               |
+|               |                       |               |
+|               |                       |               |
+|               |                       |               |
+|_______________|         _____         |_______________|
+                         / ___ \\
+                        / /   \\ \\
+                       | |     |_|
+                     __|_|__________
+                    |               |
+                    |               |
+                    |               |
+                    |               |
+                    |               |
+                    |_______________|
+`
 
 let consoleTextRendered = false;
 
@@ -258,8 +305,8 @@ function init() {
 
     window.addEventListener('scroll', handleScrollPage);
     
-    document.title === 'Х А К А Т 0 Н'
     //INTERVAL FOR TITLE
+    document.title === 'Х А К А Т 0 Н'
     setInterval(() => { 
         if (document.title === 'Х А К А Т 0 Н') {
             document.title = 'Х 👾 К 👾 Т 🤖 Н'
@@ -267,6 +314,16 @@ function init() {
             document.title = 'Х А К А Т 0 Н'
         }
     }, 3000);
+
+    // INTERVAL FOR TRACKS
+    trackSecurityPicture.innerText = doorlockPictures;
+    setInterval(() => {
+        if (trackSecurityPicture.innerText === doorlockPictures) {
+            trackSecurityPicture.innerText = doorlockOpenedPictures;
+        } else {
+            trackSecurityPicture.innerText = doorlockPictures;
+        }
+    }, 3000)
 }
 
 // INITIAL
