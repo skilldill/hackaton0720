@@ -1,0 +1,96 @@
+.mobile {
+    font-family: 'PT Mono', monospace;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.mobile header .timer {
+    margin: 20px 0;
+}
+
+.mobile header .timer p {
+    margin: 0;
+    font-size: 20px;
+}
+
+.mobile header .title {
+    font-size: 50px;
+    margin: 0;
+}
+
+.mobile header .sub-title {
+    margin: 0;
+}
+
+.mobile .about {
+    background-color: #373737;
+    color: #ECECEC;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.mobile .tracks .title {
+    font-size: 50px;
+}
+
+.mobile .tracks .track {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.mobile .gifts {
+    margin-bottom: 50px;
+    padding-bottom: 0;
+}
+
+.mobile .gifts .title {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.mobile .gifts .gift {
+    background-color: #373737;
+    color: #ECECEC;
+    padding: 20px;
+    border-radius: 15px; 
+    margin-bottom: 20px;
+}
+
+.mobile .gifts .gift-ligth {
+    background-color: transparent;
+    color: #373737;
+    padding: 20px;
+    border-radius: 15px; 
+    border: 2px dashed #373737;
+}
+
+.mobile .endpoints .title {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.mobile .endpoints .endpoints-map {
+    background-color: #373737;
+    color: #ECECEC;
+    padding: 20px;
+    border-radius: 15px; 
+}
+
+.mobile .members {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    background-color: transparent;
+}
+
+.mobile .members .title {
+    font-size: 50px;
+    color: #373737;
+}
+
+.mobile .members pre {
+    font-size: 20px;
+    color: #373737;
+}

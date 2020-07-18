@@ -6,240 +6,356 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/style.mobile.css">
         <title>Х А К А Т 0 Н</title>
     </head>
     <body>
-        <div class="container">
-            <header class="header" id="header">
-                <nav class="menu">
-                    <ul class="d-flex justify-content-around">
-                        <li class="menu-item">
-                            <a href="#about"><span class="arrow">></span>О хакатоне</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#cases"><span class="arrow">></span>Кейсы</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#gifts"><span class="arrow">></span>Призы</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#endpoints"><span class="arrow">></span>Карта событий</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#members"><span class="arrow">></span>Люди</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="d-flex justify-content-end align-items-end">
-                    <h3 class="display-3 sub-title">ОНЛАЙН</h3>
-                    <h1 class="display-1 title">ХАКАТОН</h1>
-                </div>
-                <h3 class="display-3 title-date text-right">10 - 12 июля</h3>
-                <div class="row">
-                    <div class="col col-md-4">
-                        <h3 class="display-3 sub-title">До конца регистрации осталось:</h3>
-                        <h3 class="display-3 sub-title" id="timer-display"></h3>
+        <div id="desktop" style="display: none">
+            <div class="container">
+                <header class="header" id="header">
+                    <nav class="menu">
+                        <ul class="d-flex justify-content-around">
+                            <li class="menu-item">
+                                <a href="#about"><span class="arrow">></span>О хакатоне</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#cases"><span class="arrow">></span>Кейсы</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#gifts"><span class="arrow">></span>Призы</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#endpoints"><span class="arrow">></span>Карта событий</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#members"><span class="arrow">></span>Люди</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="d-flex justify-content-end align-items-end">
+                        <h3 class="display-3 sub-title">ОНЛАЙН</h3>
+                        <h1 class="display-1 title">ХАКАТОН</h1>
                     </div>
-                    <div class="col col-md-8">
-                        <div class="d-flex justify-content-end">
-                            <div class="code-block">
-                                <div class="mockup-code">
-                                    <img src="./img/mockup-code.png" alt="mockup code">
-                                    <a class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSeB_kk7tGUyYYJAuaHxNwWy-WYG2vwYimicnzFaHQTs1jMI5w/viewform">
-                                        goto регистрация
-                                    </a>
+                    <h3 class="display-3 title-date text-right">07 - 09 июля</h3>
+                    <div class="row">
+                        <div class="col col-md-4">
+                            <h3 class="display-3 sub-title">До конца регистрации осталось:</h3>
+                            <h3 class="display-3 sub-title" id="timer-display"></h3>
+                        </div>
+                        <div class="col col-md-8">
+                            <div class="d-flex justify-content-end">
+                                <div class="code-block">
+                                    <div class="mockup-code">
+                                        <img src="./img/mockup-code.png" alt="mockup code">
+                                        <a class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSeB_kk7tGUyYYJAuaHxNwWy-WYG2vwYimicnzFaHQTs1jMI5w/viewform">
+                                            goto регистрация
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col col-md-7">
-                        <div class="code-block">
-                            <div class="mockup-code-light">
-                                <img src="./img/mockup-code-sm.png" alt="mockup code">
+                    <div class="row">
+                        <div class="col col-md-7">
+                            <div class="code-block">
+                                <div class="mockup-code-light">
+                                    <img src="./img/mockup-code-sm.png" alt="mockup code">
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </header>
-            <section class="about" id="about">
-                <div class="console">
-                    <div class="console-header">
-                        <div class="d-flex align-items-center controls">
-                            <div class="circle circle-red"></div>
-                            <div class="circle circle-yellow"></div>
-                            <div class="circle circle-green"></div>
+                </header>
+                <section class="about" id="about">
+                    <div class="console">
+                        <div class="console-header">
+                            <div class="d-flex align-items-center controls">
+                                <div class="circle circle-red"></div>
+                                <div class="circle circle-yellow"></div>
+                                <div class="circle circle-green"></div>
+                            </div>
+                        </div>
+                        <pre id="console-content" class="console-content">Online-Hackaton: ~scope~ user$</pre>
+                        <button type="button" class="btn btn-outline-light btn-lg" id="btn-goto-cases">
+                            Перейти к кейсам
+                        </button>
+                        <img src="./img/rabbits.svg" alt="rabbits">
+                    </div>
+                </section>
+            </div>
+            <section class="cases" id="cases">
+                <div class="container">
+                    <div class="row">
+                        <h1 class="display-1 title">ТРЕКИ$</h1>
+                        <div class="row">
+                            <div class="col col-md-6">
+                                <div class="track d-flex justify-content-center flex-column">
+                                    <h3 class="sub-title">Безопасность</h3>
+                                    <div class="picture">
+                                        <img src="https://media2.giphy.com/media/MGaacoiAlAti0/giphy.gif?cid=ecf05e47fd5r6soqyllk1z57mixgsru94fp40fjzipp6a6id&rid=giphy.gif" alt="safety">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col col-md-6">
+                                <div class="track d-flex justify-content-center flex-column">
+                                    <h3 class="sub-title">Банковское дело</h3>
+                                    <div class="picture">
+                                        <img src="https://media2.giphy.com/media/ADgfsbHcS62Jy/giphy.gif?cid=ecf05e4761ohk7zo7anngl1px9z6w93s2nnqooio81ryaigi&rid=giphy.gif" alt="dollars">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <pre id="console-content" class="console-content">Online-Hackaton: ~scope~ user$</pre>
-                    <button type="button" class="btn btn-outline-light btn-lg" id="btn-goto-cases">
-                        Перейти к кейсам
-                    </button>
-                    <img src="./img/rabbits.svg" alt="rabbits">
                 </div>
             </section>
-        </div>
-        <section class="cases" id="cases">
             <div class="container">
-                <div class="row">
-                    <h1 class="display-1 title">ТРЕКИ$</h1>
+                <section class="gifts" id="gifts">
                     <div class="row">
-                        <div class="col col-md-6">
-                            <div class="track d-flex justify-content-center flex-column">
-                                <h3 class="sub-title">Безопасность</h3>
-                                <div class="picture">
-                                    <img src="https://media2.giphy.com/media/MGaacoiAlAti0/giphy.gif?cid=ecf05e47fd5r6soqyllk1z57mixgsru94fp40fjzipp6a6id&rid=giphy.gif" alt="safety">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col col-md-6">
-                            <div class="track d-flex justify-content-center flex-column">
-                                <h3 class="sub-title">Банковское дело</h3>
-                                <div class="picture">
-                                    <img src="https://media2.giphy.com/media/ADgfsbHcS62Jy/giphy.gif?cid=ecf05e4761ohk7zo7anngl1px9z6w93s2nnqooio81ryaigi&rid=giphy.gif" alt="dollars">
-                                </div>
-                            </div>
+                        <div class="col col-md-5">
+                            <h1 class="display-1 title">
+                                ПРИЗЫ
+                            </h1>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-        <div class="container">
-            <section class="gifts" id="gifts">
-                <div class="row">
-                    <div class="col col-md-5">
-                        <h1 class="display-1 title">
-                            ПРИЗЫ
-                        </h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="code-block">
-                            <div class="gift-code mock-code">
-                                <div class="description">
-                                    <p>
-                                        Вряд ли у тебя будет ещё возможность побывать на таком
-                                        мастерклассе) Настояший хаккер, опыт которого заставляет
-                                        трястись от страха любой web-севис, готов раскрыть карты команде 
-                                        победителей. Никакого онлайна, мастеркласс будет только оффлайн...
-                                    </p>
-                                </div>
-                                <h3 class="card-description" style="left: 280px; top: 270px;">
-                                    Мастеркласс
-                                </h3>
-                                <img src="./img/gifts-dark-code.png" alt="code">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="d-flex justify-content-end">
+                    <div class="row">
+                        <div class="col">
                             <div class="code-block">
-                                <div class="gift-code mock-code-ligth">
-                                    <div class="description description-ligth">
+                                <div class="gift-code mock-code">
+                                    <div class="description">
                                         <p>
-                                            Любой труд должен быть оплачен.
-                                            Оплата деньгами может стать отличным призом
-                                            для победителя, заработаный кэш можно потратить
-                                            на платный софт, на еду или ещё на какие приколы
+                                            Вряд ли у тебя будет ещё возможность побывать на таком
+                                            мастерклассе) Настояший хаккер, который готов раскрыть карты команде 
+                                            победителей, а его опыт заставляет трястись от страха любой web-севис. 
+                                            Никакого онлайна, мастеркласс будет только оффлайн...
                                         </p>
                                     </div>
-                                    <h3 class="card-description-ligth">
-                                        X0.000 руб
+                                    <h3 class="card-description" style="left: 280px; top: 270px;">
+                                        Мастеркласс
                                     </h3>
-                                    <img src="./img/gifts-ligth-code.png" alt="code">
+                                    <img src="./img/gifts-dark-code.png" alt="code">
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="code-block">
-                            <div class="gift-code mock-code">
-                                <div class="description">
-                                    <p>
-                                        Книги лучший источник знаний. Не веришь? Спроси у любого 
-                                        крутого специалиста, чтобы прийти к тому что у него есть, он
-                                        перемолотил ни одну стопку книг. А книги Дядюшки Боба (Роберта Мартина)
-                                        лучший бумажный источник мудрости.
-                                    </p>
+                    <div class="row">
+                        <div class="col">
+                            <div class="d-flex justify-content-end">
+                                <div class="code-block">
+                                    <div class="gift-code mock-code-ligth">
+                                        <div class="description description-ligth">
+                                            <p>
+                                                Любой труд должен быть оплачен.
+                                                Оплата деньгами может стать отличным призом
+                                                для победителя, а заработаный кэш можно потратить
+                                                на платный софт, на еду или ещё на какие-либо приколы
+                                            </p>
+                                        </div>
+                                        <h3 class="card-description-ligth">
+                                            X0.000 руб
+                                        </h3>
+                                        <img src="./img/gifts-ligth-code.png" alt="code">
+                                    </div>
                                 </div>
-                                <h3 class="card-description" style="left: 250px; top: 240px;">
-                                    Знания в виде <br> книг
-                                </h3>
-                                <img src="./img/gifts-dark-code.png" alt="code">
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section class="endpoints" id="endpoints">
-                <div class="row">
-                    <div class="d-flex justify-content-end align-items-end">
-                        <h3 class="display-3 sub-title">КАРТА</h3>
-                        <h1 class="display-1 title">СОБЫТИЙ</h1>
-                    </div>
-                </div>
-                <div class="console">
-                    <div class="console-header">
-                        <div class="d-flex align-items-center controls">
-                            <div class="circle circle-red"></div>
-                            <div class="circle circle-yellow"></div>
-                            <div class="circle circle-green"></div>
-                        </div>
-                        <span class="console-title">
-                            Консоль контрольных точек
-                        </span>
-                    </div>
-                    <div class="console-content" id="console-endpoints">
-                        <div class="logs" id="logs"></div>
-                        <div class="console-form">
-                            <span>Online-Hackaton: ~scope~ user$</span>
-                            <form id="console-endpoints-form">
-                                <input type="text" name="command" autocomplete="off">
-                            </form>
+                    <div class="row">
+                        <div class="col">
+                            <div class="code-block">
+                                <div class="gift-code mock-code">
+                                    <div class="description">
+                                        <p>
+                                            Книги - лучший источник знаний. Не веришь? Спроси у любого 
+                                            крутого специалиста. Чтобы прийти к тому, что у него есть, он
+                                            перемолотил не одну стопку книг. А книги Дядюшки Боба (Роберта Мартина) - 
+                                            лучший бумажный источник мудрости.
+                                        </p>
+                                    </div>
+                                    <h3 class="card-description" style="left: 250px; top: 240px;">
+                                        Знания в виде <br> книг
+                                    </h3>
+                                    <img src="./img/gifts-dark-code.png" alt="code">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            
-        </div>
-        <section class="members" id="members">
-            <div class="container">
-                <div class="d-flex justify-content-end">
-                    <h1 class="display-1 title">ЛЮДИ</h1>
-                </div>
-                <div class="d-flex justify-content-center">
-                    <div class="member-card">
-                        <div class="avatar">
-                            <img src="./img/members/AlexeyTomilov.png" alt="Alexey Tomilov">
+                </section>
+                <section class="endpoints" id="endpoints">
+                    <div class="row">
+                        <div class="d-flex justify-content-end align-items-end">
+                            <h3 class="display-3 sub-title">КАРТА</h3>
+                            <h1 class="display-1 title">СОБЫТИЙ</h1>
                         </div>
-                        <pre>@ - - - - - - - - - @</pre>
-                        <pre>|  Алексей Томилов  |</pre>
-                        <pre>|    Организатор    |</pre>
-                        <pre>@ - - - - - - - - - @</pre>
                     </div>
-                    <div class="member-card">
-                        <div class="avatar">
-                            <img src="./img/members/AlexUtbanov.png" alt="Alex Utbanov">
+                    <div class="console">
+                        <div class="console-header">
+                            <div class="d-flex align-items-center controls">
+                                <div class="circle circle-red"></div>
+                                <div class="circle circle-yellow"></div>
+                                <div class="circle circle-green"></div>
+                            </div>
+                            <span class="console-title">
+                                Консоль контрольных точек
+                            </span>
                         </div>
-                        <pre>@ - - - - - - - - - - @</pre>
-                        <pre>|  Александр Утбанов  |</pre>
-                        <pre>|     Организатор     |</pre>
-                        <pre>@ - - - - - - - - - - @</pre>
+                        <div class="console-content" id="console-endpoints">
+                            <div class="logs" id="logs"></div>
+                            <div class="console-form">
+                                <span>Online-Hackaton: ~scope~ user$</span>
+                                <form id="console-endpoints-form">
+                                    <input type="text" name="command" autocomplete="off">
+                                </form>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </section>
+                
             </div>
-        </section>
-        <footer>
-            <div class="container">
+            <section class="members" id="members">
+                <div class="container">
+                    <div class="d-flex justify-content-end">
+                        <h1 class="display-1 title">ЛЮДИ</h1>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <div class="member-card">
+                            <div class="avatar">
+                                <img src="./img/members/AlexeyTomilov.png" alt="Alexey Tomilov">
+                            </div>
+                            <pre>@ - - - - - - - - - @</pre>
+                            <pre>|  Алексей Томилов  |</pre>
+                            <pre>|    Организатор    |</pre>
+                            <pre>@ - - - - - - - - - @</pre>
+                        </div>
+                        <div class="member-card">
+                            <div class="avatar">
+                                <img src="./img/members/AlexUtbanov.png" alt="Alex Utbanov">
+                            </div>
+                            <pre>@ - - - - - - - - - - @</pre>
+                            <pre>|  Александр Утбанов  |</pre>
+                            <pre>|     Организатор     |</pre>
+                            <pre>@ - - - - - - - - - - @</pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <div class="container">
 
-            </div>
-        </footer>
+                </div>
+            </footer>
+        </div>
+        <div id="mobile" class="mobile">
+            <header>
+                <h3 class="sub-title">ОНЛАЙН</h3>
+                <h1 class="title">ХАКАТОН</h1>
+
+                <div class="timer">
+                    <p>До конца регистрации осталось:</p>
+                    <p id="mobile-timer-display"></p>
+                </div>
+
+                <div>
+                    <a class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSeB_kk7tGUyYYJAuaHxNwWy-WYG2vwYimicnzFaHQTs1jMI5w/viewform">
+                        goto регистрация
+                    </a>
+                </div>
+            </header>
+            <section class="about">
+                <p>
+                    Привет, ты попал на страницу хакатона, который устроили обычные ребята, заручившись поддержкой  
+                    Тюменской школы программирования. Участие в хакатоне - отличная возможность прокачать свои скиллы, улучшить навыки работы в команде 
+                    и просто найти единомышленников 🐰 🦊 🐻. Мы подобрали для тебя вкусные кейсы, а спонсоры хакатона посчитали, что будет 
+                    нехорошо оставлять победителя без заслуженного приза. 👇 👇 👇 Жмякай на кнопку ниже и переходи к трекам...
+                </p>
+            </section>
+            <section class="tracks">
+                <h1 class="title">ТРЕКИ$</h1>
+
+                <div class="track">
+                    <h3 class="sub-title">Безопасность</h3>
+                    <div class="picture">
+                        <img src="https://media2.giphy.com/media/MGaacoiAlAti0/giphy.gif?cid=ecf05e47fd5r6soqyllk1z57mixgsru94fp40fjzipp6a6id&rid=giphy.gif" alt="safety">
+                    </div>
+                </div>
+
+                <div class="track">
+                    <h3 class="sub-title">Банковское дело</h3>
+                    <div class="picture">
+                        <img src="https://media2.giphy.com/media/ADgfsbHcS62Jy/giphy.gif?cid=ecf05e4761ohk7zo7anngl1px9z6w93s2nnqooio81ryaigi&rid=giphy.gif" alt="dollars">
+                    </div>
+                </div>
+            </section>
+            <section class="gifts">
+                <h1 class="title">Призы</h1>
+
+                <div class="gift">
+                    <h3>Мастеркласс</h3>
+                    <p>
+                        Вряд ли у тебя будет ещё возможность побывать на таком
+                        мастерклассе) Настояший хаккер, который готов раскрыть карты команде 
+                        победителей, а его опыт заставляет трястись от страха любой web-севис. 
+                        Никакого онлайна, мастеркласс будет только оффлайн...
+                    </p>
+                </div>
+
+                <div class="gift gift-ligth">
+                    <h3>X0.000 руб</h3>
+                    <p>
+                        Любой труд должен быть оплачен.
+                        Оплата деньгами может стать отличным призом
+                        для победителя, а заработаный кэш можно потратить
+                        на платный софт, на еду или ещё на какие-либо приколы
+                    </p>
+                </div>
+                
+                <div class="gift">
+                    <h3>Знания в виде книг</h3>
+                    <p>
+                        Книги - лучший источник знаний. Не веришь? Спроси у любого 
+                        крутого специалиста. Чтобы прийти к тому, что у него есть, он
+                        перемолотил не одну стопку книг. А книги Дядюшки Боба (Роберта Мартина) - 
+                        лучший бумажный источник мудрости.
+                    </p>
+                </div>
+
+            </section>
+            <section class="endpoints">
+                <h1 class="title">КОНТРОЛЬНЫЕ ТОЧКИ</h1>
+                <div class="endpoints-map">
+                    <p> > > > START 12:00 < < <</p>
+                    <p>|</p>
+                    <p>+ --- Первая контрольная точка</p>
+                    <p>|</p>
+                    <p>+ --- Вторая контрольная точка</p>
+                    <p>|</p>
+                    <p>+ --- Третья контрольная точка</p>
+                    <p>|</p>
+                    <p>+ --- CODE FREEZE</p>
+                    <p>|</p>
+                    <p> > > > END 12:00 < < <</p>
+                </div>
+            </section>
+            <section class="members" id="members">
+                <h1 class="title">ЛЮДИ</h1>
+                <div class="member-card">
+                    <div class="avatar">
+                        <img src="./img/members/AlexeyTomilov.png" alt="Alexey Tomilov">
+                    </div>
+                    <pre>@ - - - - - - - - - @</pre>
+                    <pre>|  Алексей Томилов  |</pre>
+                    <pre>|    Организатор    |</pre>
+                    <pre>@ - - - - - - - - - @</pre>
+                </div>
+                <div class="member-card">
+                    <div class="avatar">
+                        <img src="./img/members/AlexUtbanov.png" alt="Alex Utbanov">
+                    </div>
+                    <pre>@ - - - - - - - - - - @</pre>
+                    <pre>|  Александр Утбанов  |</pre>
+                    <pre>|     Организатор     |</pre>
+                    <pre>@ - - - - - - - - - - @</pre>
+                </div>
+            </section>
+        </div>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
         <script src="./js/script.js"></script>
