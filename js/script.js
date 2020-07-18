@@ -1,3 +1,6 @@
+const desktop = document.getElementById('desktop');
+const mobile = document.getElementById('mobile');
+
 const headerBlock = document.getElementById('header');
 const aboutBlock = document.getElementById('about');
 const casesBlock = document.getElementById('cases');
@@ -269,6 +272,11 @@ function init() {
         }
     }, 3000);
 
+    if (window.innerWidth >= 1050) {
+        document.body.removeChild(mobile);
+    } else {
+        document.body.removeChild(desktop);
+    }
 }
 
 // INITIAL

@@ -51,8 +51,13 @@ let x = setInterval(function() {
   
   const timing = days + " " + daysWord + " <br>" + addZeroStart(hours) + ":"+ addZeroStart(minutes) + ":" + addZeroStart(seconds);
 
-  timerDisplay.innerHTML = timing;
-  mobileTimerDisplay.innerHTML = timing;
+  if (!!timerDisplay) {
+    timerDisplay.innerHTML = timing;
+  }
+
+  if (!!mobileTimerDisplay) {
+    mobileTimerDisplay.innerHTML = timing;
+  }
 
   // If the count down is finished, write some text 
   if (distance < 0) {
