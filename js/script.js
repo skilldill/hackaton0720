@@ -8,7 +8,6 @@ const giftsBlock = document.getElementById('gifts');
 const endpointsBlock = document.getElementById('endpoints');
 
 const consoleContent = document.getElementById('console-content');
-const btnGotoCases = document.getElementById('btn-goto-cases');
 const casesItems = document.getElementsByClassName('case-item');
 const giftsCodes = document.getElementsByClassName('gift-code');
 const menuItems = headerBlock.querySelectorAll('.menu-item a');
@@ -41,10 +40,6 @@ function renderTextLetters(text) {
             const prevText = consoleContent.innerText;
             const prepareText = prevText + char;
             consoleContent.innerHTML = prepareText;
-
-            if (i === text.length - 1) {
-                btnGotoCases.style.display = "block";
-            }
         });
     }
 }
@@ -253,12 +248,9 @@ endpointsForm['command'].addEventListener('keydown', (event) => {
 })
 
 function init() {
-    btnGotoCases.style.display = "none";
-    
     addMouseEventCases();
     addMouseEventGiftCode();
     addMouseEventMenuItems();
-    btnGotoCases.addEventListener('click', handleClickBtnGoToCase);
 
     window.addEventListener('scroll', handleScrollPage);
     
