@@ -16,6 +16,8 @@ const endpointsForm = endpointsBlock.querySelector('#console-endpoints-form');
 const endpointsLogs = endpointsBlock.querySelector('#logs');
 const endpointsConsoleForm = endpointsBlock.querySelector('.console-form');
 const trackSecurityPicture = casesBlock.querySelector('#track-security-picture');
+const endpointsModal = document.getElementById('endpoints-body');
+const endpointsModalBody = endpointsModal.querySelector('.endpoints-modal-body');
 
 const consoleText = ' Привет, ты попал на страницу \n' + 
     'хакатона, который устроили обычные ребята, заручившись поддержкой \n' + 
@@ -46,16 +48,31 @@ function renderTextLetters(text) {
 const endpointsCommandResult = `
     <div class="endpoints-map">
         <p> > > > START 12:00 < < <</p>
+        <p>| 07.08.2020</p>
+        <p>+ --- 12:00 – приветствие, знакомство с командами и экспертами</p>
         <p>|</p>
-        <p>+ --- <a href="#">Первая контрольная точка</a></p>
+        <p>+ --- 12:30 – выдача кейсов</p>
         <p>|</p>
-        <p>+ --- <a href="#">Вторая контрольная точка</a></p>
+        <p>+ --- 13:30 – фиксирование кейсов за командами</p>
         <p>|</p>
-        <p>+ --- <a href="#">Третья контрольная точка</a></p>
+        <p>+ --- 13:45 – самостоятельная работа</p>
         <p>|</p>
-        <p>+ --- <a href="#">CODE FREEZE</a></p>
+        <p>| 08.08.2020</p>
         <p>|</p>
-        <p> > > > END 12:00 < < <</p>
+        <p>+ --- 12:00 – промежуточный чек-поинт</p>
+        <p>|</p>
+        <p>+ --- 18:00 – промежуточный чек-поинт</p>
+        <p>|</p>
+        <p>| 09.08.2020</p>
+        <p>|</p>
+        <p>+ --- 9:00 – экспресс-интервью с работодателями по 5 минут на человека</p>
+        <p>|</p>
+        <p>+ --- 10:00 – сбор материалов от команд</p>
+        <p>|</p>
+        <p>+ --- 10:30 – защита проектов</p>
+        <p>|</p>
+        <p>+ --- 11:30 – награждение команд</p>
+        <p> > > > END < < <</p>
     </div>
 `
 
@@ -163,6 +180,10 @@ function handleClickBtnGoToCase() {
 
 endpointsConsole.addEventListener('click', () => endpointsForm['command'].focus());
 
+endpointsModal.addEventListener('click', () => { endpointsModal.style.display = 'none' });
+endpointsModalBody.addEventListener('click', (event) => event.stopPropagation());
+
+
 endpointsForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -226,7 +247,8 @@ endpointsForm.addEventListener('submit', (event) => {
                     clearInterval(interval);
                     clearTimeout(timer);
                     endpointsConsoleForm.style.display = "flex";
-                    endpointsLogs.innerHTML = endpointsCommandResult;
+                    endpointsModal.style.display = "flex";
+                    endpointsLogs.innerHTML = "";
                     endpointsForm['command'].focus();
                 });
                 break;
