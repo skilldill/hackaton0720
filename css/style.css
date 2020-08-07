@@ -212,7 +212,22 @@
 }
 
 .cases .case {
+    margin-bottom: 20px;
     
+}
+
+.cases .case-content {
+    display: none;
+    font-size: 20px;
+    padding: 10px 30px;
+}
+
+.cases .case-opener {
+    cursor: pointer;
+}
+
+.cases .case-content a {
+    color: #ffffff;
 }
 
 .case-item {

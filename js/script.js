@@ -19,6 +19,31 @@ const trackSecurityPicture = casesBlock.querySelector('#track-security-picture')
 const endpointsModal = document.getElementById('endpoints-body');
 const endpointsModalBody = endpointsModal.querySelector('.endpoints-modal-body');
 
+const caseOpeners = casesBlock.querySelectorAll('.case-opener');
+
+function bindClickCasesBlock() {
+
+    for (let i = 0; i < caseOpeners.length; i++) {
+        const opener = caseOpeners[i];
+
+        opener.addEventListener('click', () => {
+            const idTarget = opener.getAttribute('data-case');
+            const caseContent = casesBlock.querySelector(`[data-case-content="${idTarget}"]`);
+            const opened = caseContent.getAttribute('data-opened') === "1";
+
+            if (opened) {
+                caseContent.style.display = 'none';
+                caseContent.setAttribute('data-opened', '0');
+                opener.innerText = opener.innerText.replace('V', '>');
+            } else {
+                caseContent.style.display = 'block';
+                caseContent.setAttribute('data-opened', '1');
+                opener.innerText = opener.innerText.replace('>', 'V');
+            }
+        })
+    }
+}
+
 const consoleText = ' Привет, ты попал на страницу \n' + 
     'хакатона, который устроили обычные ребята, заручившись поддержкой \n' + 
     'Тюменской школы программирования. Участие в хакатоне - отличная \n' +
@@ -272,6 +297,7 @@ function init() {
     addMouseEventCases();
     addMouseEventGiftCode();
     addMouseEventMenuItems();
+    bindClickCasesBlock();
 
     window.addEventListener('scroll', handleScrollPage);
     
